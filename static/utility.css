@@ -26,7 +26,15 @@
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    width: 80%;
+    width: 90%;
+    font-size: 2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
 }
 
 .nav-right a:hover,
@@ -46,7 +54,7 @@
 
 .nav-right li a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
@@ -54,4 +62,10 @@
 ul>li {
     padding-left: 30px;
     padding-right: 30px;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    background-color: #363062;
 }
