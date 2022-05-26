@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+:root {
+    --navfoot: #363062;
+    --white: #ffffff;
+    --body: #E9D5CA;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -27,14 +33,18 @@
     align-items: center;
     margin: auto;
     width: 90%;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .navbar a {
     text-decoration: none;
-    color: white;
+    color: var(--white);
     font-weight: bold;
     font-family: 'Lato', sans-serif;
+}
+
+.navbar a:hover {
+    color: red;
 }
 
 .nav-right a:hover,
@@ -49,12 +59,12 @@
 
 .nav-right li {
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .nav-right li a {
     text-decoration: none;
-    color: white;
+    color: var(--white);
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
@@ -67,5 +77,22 @@ ul>li {
 header {
     margin: 0;
     padding: 0;
-    background-color: #363062;
+    background-color: var(--navfoot);
+}
+
+body {
+    background-color: var(--body);
+    height: 100vh;
+}
+
+footer {
+    background-color: var(--navfoot);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
 }
