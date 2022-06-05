@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 :root {
-    --navfoot: #363062;
     --white: #ffffff;
-    --body: #E9D5CA;
+    --body: #79DAE8;
+    --black: #000000;
+    --navfoot: #000000
+    
 }
 
 * {
@@ -38,7 +40,7 @@
 
 .navbar a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--black);
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
@@ -64,7 +66,7 @@
 
 .nav-right li a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--black);
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
@@ -81,7 +83,7 @@ header {
 }
 
 body {
-    background-color: var(--body);
+    background-color: var(--white);
     height: 100vh;
 }
 
