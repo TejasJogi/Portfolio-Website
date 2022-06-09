@@ -119,14 +119,15 @@ footer a {
     width: 90%;
     margin: auto;
     justify-content: space-around;
+    align-items: center;
 }
 
 .info {
     background-color: yellow;
 }
+
 .img {
-    background-color: blue
-    ;
+    background-color: blue;
 }
 
 .brand img {
