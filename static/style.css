@@ -67,7 +67,7 @@
 
 .nav-right li {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .nav-right li a {
@@ -131,6 +131,9 @@ footer a {
 }
 
 .brand img {
-    width: 89px;
-    margin-right: 500px;
+    width: 69px;
+    margin-right: 28vw;
+}
+
+
 }
