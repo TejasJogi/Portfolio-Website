@@ -2,7 +2,7 @@
 
 :root {
     --white: #ffffff;
-    --font: #00A2ED;
+    --font: --black;
     --black: #000000;
     --navfoot: white;
     --onhover: blue;
@@ -31,11 +31,11 @@
 
 .navbar {
     display: flex;
+    overflow: hidden;
     justify-content: space-around;
     align-items: center;
     margin: auto;
     width: 90%;
-    /* height: 8vh; */
     font-size: 1.8rem;
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .5);
 }
@@ -52,32 +52,32 @@
 }
 
 .right {
-    margin-left: 500px;
+    float: right;
 }
 
-.nav-right a:hover,
-.nav-right a:active {
+.right a:hover,
+.right a:active {
     color: var(--onhover);
     text-decoration: underline;
 }
 
-.nav-right {
+.right {
     margin: 0;
 }
 
-.nav-right li {
+.right {
     display: inline-block;
     font-size: 1.5rem;
 }
 
-.nav-right li a {
+.right a {
     text-decoration: none;
     color: var(--font);
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
 
-ul>li {
+a {
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -130,9 +130,10 @@ footer a {
     background-color: blue;
 }
 
-.brand img {
-    width: 69px;
-    margin-right: 28vw;
+.brand {
+    /* width: 69px;
+    margin-right: 28vw; */
+    float: left;
 }
 
 .form {
@@ -140,7 +141,7 @@ footer a {
     align-items: center;
     justify-content: center;
     width: 60%;
-    height: 60vh;
+    height: 70vh;
     margin: auto;
     border: solid 1px #050505;
     border-radius: 10px;
@@ -162,8 +163,8 @@ footer a {
     width: 60%;
     padding: 10px;
     margin: 20px;
-    background-color: whitesmoke;
-    color: var(--black);
+    background-color: var(--black);
+    color: var(--white);
     border-radius: 10px;
     border: 0;
     font-size: larger;
