@@ -44,6 +44,7 @@
     text-decoration: none;
     color: var(--font);
     font-weight: bold;
+    height: 7vh;
     font-family: 'Lato', sans-serif;
 }
 
@@ -86,12 +87,16 @@ header {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 7vh;
     background-color: var(--navfoot);
 }
 
 body {
     background-color: var(--white);
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 footer {
@@ -99,12 +104,18 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 7vh;
     text-align: center;
     background-color: var(--navfoot);
     color: var(--font);
     font-weight: bold;
     font-family: 'Lato', sans-serif;
     box-shadow: 0px -2px 2px -2px rgba(0, 0, 0, 0.5);
+}
+
+main {
+    flex: 1;
+    height: 86vh;
 }
 
 footer a {
@@ -148,7 +159,8 @@ footer a {
     flex-direction: column;
 }
 
-.form input, .form textarea {
+.form input,
+.form textarea {
     border: solid 1px var(--black);
     /* outline: none; */
     margin: 10px;
