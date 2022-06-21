@@ -7,13 +7,23 @@
 <div class="con my-5">
     <img class="conimg" src="/static/img/contact.jpg" alt="contact">
 </div>
-<div class="form mt-5">
-    <h1 class="text-center my-3">Connect with me</h1>
-    <input type="text" id="fname" placeholder="First Name" required>
-    <input type="text" id="lname" placeholder="Last Name" required>
-    <input type="text" id="email" placeholder="Email Address" required>
-    <input type="text" id="phone" placeholder="Phone No." required>
-    <textarea type="text" id="message" placeholder="Write your message here" required></textarea>
-    <button type="submit" class="submit">Submit</button>
+<div class="mt-5">
+    <form class="form" onsubmit="sendemail(); reset(); return false;">
+        <h1 class="text-center my-3">Connect with me</h1>
+        <input type="text" id="fname" placeholder="First Name" required>
+        <input type="text" id="lname" placeholder="Last Name" required>
+        <input type="text" id="email" placeholder="Email Address" required>
+        <input type="text" id="phone" placeholder="Phone No." required>
+        <textarea type="text" id="message" placeholder="Write your message here" required></textarea>
+        <button type="submit" class="submit">Submit</button>
+    </form>
 </div>
+
 {% endblock content %}
+
+{% block script %}
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="/static/js/sendemail.js"></script>
+
+{% endblock script %}
