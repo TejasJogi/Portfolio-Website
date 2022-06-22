@@ -8,7 +8,7 @@
     <img class="conimg" src="/static/img/contact.jpg" alt="contact">
 </div>
 <div class="mt-5">
-    <form class="form" onsubmit="sendemail(); reset(); return false;">
+    <form class="form" id="form" novalidate>
         <h1 class="text-center my-3">Connect with me</h1>
         <input type="text" id="fname" placeholder="First Name" required>
         <input type="text" id="lname" placeholder="Last Name" required>
@@ -20,10 +20,3 @@
 </div>
 
 {% endblock content %}
-
-{% block script %}
-
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="/static/js/sendemail.js"></script>
-
-{% endblock script %}

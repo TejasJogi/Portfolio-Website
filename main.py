@@ -1,7 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from flask_mail import Mail, Message
 
 
 app = Flask(__name__)
+
+mail = Mail(app)
 
 @app.route('/')
 def home():
@@ -13,8 +16,10 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET','POST'])
 def contact():
+    if request.method == "POST":
+        return "Sent Message"
     return render_template('contact.html')
 
 
