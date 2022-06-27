@@ -29,7 +29,17 @@ def about():
 @app.route('/contact', methods=['GET','POST'])
 def contact():
     if request.method == "POST":
-        message = "sent message"
+        fname = request.form.get('fname')
+        lname = request.form.get('lname')
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        message = request.form.get('message')
+
+        msg = Message(subject=f"Mail from {fname} {lname}", body=f"Name : {fname} {lname}\nEmail : {email}\nPhone : {phone}\n\n\nMessage : {message}", sender=mail_username, recipients=['tejasprojects123@gmail.com'])
+        print(msg)
+        mail.send(msg)
+        return render_template('contact.html', failed=True)
+
     return render_template('contact.html')
 if __name__ == '__main__':
    app.run(debug = True)
