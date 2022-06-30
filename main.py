@@ -1,17 +1,16 @@
-from email import message
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
-from config import mail_username, mail_passwoerd
+from config import mail_username, mail_password
 
 
 app = Flask(__name__)
 
 app.config['MAIL_SERVER'] = "smtp.gmail.com"
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_USERNAME'] = mail_username
-app.config['MAIL_password'] = mail_passwoerd
+app.config['MAIL_PASSWORD'] = mail_password
 
 
 mail = Mail(app)
@@ -35,7 +34,7 @@ def contact():
         phone = request.form.get('phone')
         message = request.form.get('message')
 
-        msg = Message(subject=f"Mail from {fname} {lname}", body=f"Name : {fname} {lname}\nEmail : {email}\nPhone : {phone}\n\n\nMessage : {message}", sender=mail_username, recipients=['tejasprojects123@gmail.com'])
+        msg = Message(subject=f"Mail from {fname} {lname}", body=f"Name : {fname} {lname}\nEmail : {email}\nPhone : {phone}\nMessage : {message}", sender=mail_username, recipients=['tejasprojects123@gmail.com'])
         print(msg)
         mail.send(msg)
         return render_template('contact.html', failed=True)
