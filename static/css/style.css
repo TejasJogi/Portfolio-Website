@@ -154,6 +154,12 @@ footer a {
     /* width: 69px;
     margin-right: 28vw; */
     float: left;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Koulen', cursive;
+}
+
+.brand h1 {
+    margin: 0;
 }
 
 .form {
