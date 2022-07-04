@@ -145,7 +145,7 @@ footer a {
 }
 
 .img {
-    background-color: blue;
+    /* background-color: blue; */
     height: 50vh;
     width: 50vw;
 }
@@ -220,10 +220,14 @@ footer a {
 }
 
 .greet {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .name {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 600;
+}
+
+.about {
+    font-size: 1.4rem;
 }
